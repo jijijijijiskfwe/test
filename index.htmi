@@ -1218,7 +1218,7 @@
     import { getFirestore, collection, onSnapshot, doc, updateDoc, query, getDocs, writeBatch, getDoc, setDoc, addDoc, serverTimestamp, orderBy, deleteDoc, deleteField } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
     // IMPORTANT: In a real environment, these configs should be loaded securely.
-
+//여기를 수정해주세요—------ Firebase 생성코드
     const firebaseConfig = {
         apiKey: "AIzaSyB_N5qNuqFoK1U166UjwZUs2qaAkW2z3jo",
   authDomain: "test-1f91e.firebaseapp.com",
@@ -1424,7 +1424,7 @@ const loginStatusModal = document.getElementById('login-status-modal');
             skills: DEFAULT_SKILLS, 
             currentTurnIndex: 0, 
             currentTurnCharId: null, 
-
+//여기를 수정해주세요 관리자 비밀번호
             adminPassword: "7251", 
             gameState: 'PREPARATION', 
             round: 1, 
@@ -4912,7 +4912,7 @@ createGameBtn.addEventListener('click', createGame);
         const errorP = document.getElementById('admin-password-error');
         if (gameId) {
             const gameDoc = await getDoc(doc(db, 'games', gameId));
-
+//여기를 수정해주세요 관리자 비밀번호
             const correctPassword = gameDoc.data().adminPassword || "7251";
             if (input.value === correctPassword) {
                 closeModal('admin-password-modal');
@@ -5168,3 +5168,6 @@ window.addEventListener('beforeunload', async (event) => {
 </script>
 </body>
 </html>
+
+
+
